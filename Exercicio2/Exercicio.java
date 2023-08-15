@@ -79,6 +79,12 @@ public class Exercicio {
                 System.out.println("Pressione enter para continuar...");
                 System.in.read();
                 break;
+            case 11: 
+                clearScreen();
+                Desafio.main(args);
+                System.out.println("Pressione enter para continuar...");
+                System.in.read();
+                break;
             default:
                 System.out.println("Exercicio inválido");
                 break;
