@@ -1,0 +1,1 @@
+todos os exercicios estão em "Exercicio.java", apenas separei para organizar 

@@ -8,8 +8,7 @@ public class Exercicio3 {
             int tentativas = 7;
             boolean acertou = false;
             String[] palavra = {"c", "a", "s", "a"};
-            int acertos = 0;
-
+            int[] acertos = new int[4];
             System.out.println("Jogo da forca");
             System.out.println("Você tem 7 tentativas");
             System.out.println("A palavra é: " + palavra1);
@@ -20,10 +19,11 @@ public class Exercicio3 {
                 String letraDigitada = scanner.next();
                 for (int i = 0; i < palavra.length; i++){
                     if (letraDigitada.equals(palavra[i])){
+                        acertos[i] = 1;
                         acertou = true;
-                        acertos++;
                         System.out.println("Você acertou");
                         System.out.println("Você tem " + tentativas + " tentativas");
+                        
                     }
                 }
                 if (acertou == false){
@@ -36,8 +36,8 @@ public class Exercicio3 {
                 System.out.println("Digite uma letra");
                 scanner.next();
             }
-          }while(tentativas > 0 && acertos < 4);
-            if (acertos == 4){
+          }while(tentativas > 0 && acertos[0] != 1 && acertos[1] != 1 && acertos[2] != 1 && acertos[3] != 1);
+            if (acertos[0] == 1 && acertos[1] == 1 && acertos[2] == 1 && acertos[3] == 1){
                 System.out.println("Você ganhou");
                 System.out.println("A palavra é: casa");
             }
