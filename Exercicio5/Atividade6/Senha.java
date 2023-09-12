@@ -9,8 +9,7 @@ public class Senha {
         String senha = sc.nextLine();
         System.out.println("Digite o valor constante");
         int constante = sc.nextInt();
-
-
         CrifaCesar crifaCesar = new CrifaCesar(senha, constante);
+        crifaCesar.criptografar();
     }
 }
